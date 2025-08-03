@@ -1,0 +1,103 @@
+/* 🔷 Hero Section Fullscreen */
+.hero-about-full {
+  background: url("../image/herotentang.png") center center / cover no-repeat;
+  height: 100vh; /* Layar penuh */
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* 🔷 Tentang Perusahaan Section */
+.tentang-perusahaan {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+.tentang-perusahaan h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.tentang-perusahaan span {
+  color: #0a74da;
+}
+.tentang-perusahaan p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* 🔷 Tata Letak Grid untuk Tentang Perusahaan */
+.about-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2.3rem;
+  color: #0a74da;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.about-text span {
+  color: #fff200;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔷 Visi Misi Section */
+.visi-misi {
+  padding: 4rem 2rem;
+  background-color: #eaf4fd;
+}
+.grid-visi-misi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.visi,
+.misi {
+  flex: 1;
+  min-width: 280px;
+}
+.visi h3,
+.misi h3 {
+  color: #0a74da;
+  margin-bottom: 0.5rem;
+}
+.misi ul {
+  padding-left: 1.5rem;
+}
+.misi li {
+  margin-bottom: 0.8rem;
+}

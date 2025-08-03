@@ -1,0 +1,298 @@
+/* Reset dan Umum */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: url("../image/Background.jpg");
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========================
+   NAVBAR (Awal Transparan)
+=========================== */
+.navbar {
+  position: fixed; /* Selalu di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #79b7f0bc; /* Awalnya transparan */
+  padding: 1rem 0; /* Besar di awal */
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+/* Container isi navbar */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo teks atau gambar */
+.logo img {
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Nav link */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Saat discroll, ubah warna dan padding */
+.navbar.scrolled {
+  background-color: #0a74da; /* Biru solid */
+  padding: 0.8rem 0; /* Mengecil */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo mengecil saat scroll */
+.navbar.scrolled .logo img {
+  height: 32px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.tentang-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto 2rem;
+  display: block;
+  border-radius: 12px;
+}
+/* ========================
+   FOOTER (Minimalis Tengah)
+=========================== */
+.footer {
+  background-color: #0a74da;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Logo tengah */
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.footer-logo {
+  height: 50px;
+  width: 150px;
+  max-width: 100px;
+  min-width: 80px;
+
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Sosial media */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #fff200;
+  transform: scale(1.2);
+}
+
+/* Teks hak cipta */
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* 🔷 Tombol Buka Modal (Floating Button) */
+.wa-popup-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 14px 16px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.wa-popup-btn:hover {
+  background-color: #1ebc59;
+}
+
+/* 🔷 Modal WhatsApp */
+.wa-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.wa-modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.wa-close {
+  float: right;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+}
+.wa-close:hover {
+  color: #000;
+}
+.wa-modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.wa-modal-content input,
+.wa-modal-content textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.wa-modal-content button {
+  background-color: #25d366;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.wa-modal-content button:hover {
+  background-color: #1ebc59;
+}
+
+/* Animasi logo mengambang */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ========================
+     RESPONSIF NAVBAR
+  =========================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0a74da;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+@media (max-width: 360px) {
+  .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .footer-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo {
+    width: clamp(80px, 20vw, 120px);
+    height: auto;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .footer-social a i {
+    font-size: 1.3rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+}

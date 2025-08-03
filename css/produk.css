@@ -1,0 +1,111 @@
+/* 🔷 Hero Produk */
+.hero-produk {
+  height: 60vh;
+  background: url("../image/bg2.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.hero-overlay {
+  background-color: rgba(10, 117, 218, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+}
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-overlay p {
+  font-size: 1.1rem;
+}
+
+/* 🔷 Produk Grid */
+.produk-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.produk-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.produk-item:hover {
+  transform: translateY(-5px);
+}
+.produk-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.produk-item h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #0a74da;
+}
+
+/* 🔷 Deskripsi Produk (Toggle) */
+.produk-deskripsi {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.produk-deskripsi.show {
+  max-height: 1000px; /* cukup tinggi agar menyesuaikan isi */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔷 List Deskripsi Produk */
+.deskripsi-list {
+  text-align: left;
+  font-size: 0.95rem;
+  color: #555;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.deskripsi-list li {
+  margin-bottom: 0.4rem;
+}
+
+.btn-pesan {
+  display: inline-block;
+  background: #0a74da;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.btn-pesan:hover {
+  background: #095ab0;
+}
+
+/* 🔷 Responsif */
+@media (max-width: 1024px) {
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
+}
