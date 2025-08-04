@@ -1,9 +1,21 @@
-// Fungsi toggle menu hamburger
+// Toggle menu untuk tampilan mobile
 function toggleMenu() {
   const navLinks = document.getElementById("nav-links");
   navLinks.classList.toggle("show");
 }
-// Efek scroll pada navbar
+// Menutup menu saat klik di luar area nav
+document.addEventListener("click", function (event) {
+  const navLinks = document.getElementById("nav-links");
+  const hamburger = document.querySelector(".hamburger");
+  const isClickInsideNav = navLinks.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+
+  if (!isClickInsideNav && !isClickOnHamburger) {
+    navLinks.classList.remove("show");
+  }
+});
+
+// Ubah style navbar saat discroll
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
@@ -48,23 +60,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-function kirimWhatsApp() {
-  const nama = document.getElementById("nama").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const pesan = document.getElementById("pesan").value.trim();
-
-  const teks = `Halo Pilar Screen Printing,%0A%0ASaya ingin menyampaikan kritik dan saran:%0A%0A
-Nama: ${nama}%0A
-Email: ${email}%0A
-Pesan: ${pesan}`;
-
-  const nomor = "6282232674959"; // Nomor WhatsApp tujuan
-  const url = `https://wa.me/${nomor}?text=${teks}`;
-
-  window.open(url, "_blank");
-  return false; // Mencegah form reload
-}
-
 function openWAModal() {
   document.getElementById("waModal").style.display = "block";
 }
@@ -84,37 +79,3 @@ function kirimKritikSaran() {
   closeWAModal();
   return false;
 }
-
-// function toggleDeskripsi(el) {
-//   const deskripsi = el.querySelector(".produk-deskripsi");
-//   deskripsi.classList.toggle("show");
-// }
-
-// const produkData = [
-//   {
-//     title: "Cup PP",
-//     desc: "Cup PP bening, cocok untuk minuman dingin. Bisa custom logo brand UMKM Anda.",
-//   },
-//   {
-//     title: "Cup PET",
-//     desc: "Cup PET lebih tebal dan transparan, ideal untuk cold drink premium dan branding.",
-//   },
-//   {
-//     title: "Cup Paper",
-//     desc: "Cup kertas ramah lingkungan, cocok untuk kopi panas atau minuman takeaway.",
-//   },
-//   {
-//     title: "Paperbowl",
-//     desc: "Paperbowl tahan panas dan tumpahan, cocok untuk bakso, mie, atau makanan berat lainnya.",
-//   },
-// ];
-
-// function openModal(index) {
-//   document.getElementById("modal-title").innerText = produkData[index].title;
-//   document.getElementById("modal-desc").innerText = produkData[index].desc;
-//   document.getElementById("modal").style.display = "flex";
-// }
-
-// function closeModal() {
-//   document.getElementById("modal").style.display = "none";
-// }
