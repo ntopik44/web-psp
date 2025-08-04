@@ -6,20 +6,19 @@
     <title>Kontak | Pilar Screen Printing</title>
 
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="./image/logopilar.jpg"
-      type="image/x-icon"
-    />
-    <!-- Style Css -->
+    <link rel="shortcut icon" href="image/logopilar.jpg" type="image/x-icon" />
+
+    <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/kontak.css" />
-    <!-- Font Awesome CDN -->
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- AOS -->
+
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
@@ -49,24 +48,24 @@
       </div>
     </section>
 
-    <!-- 🔷 Google Maps Section -->
+    <!-- 🔷 Google Maps -->
     <section class="maps-section" data-aos="fade-up">
       <div class="maps-box">
         <h2>Lokasi Kami</h2>
         <p>Silakan kunjungi kami di lokasi berikut:</p>
       </div>
-
       <div class="maps-full">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d531.8795687945487!2d110.87792486998592!3d-7.697267917580433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a3b6d9be56a4f%3A0x7af0d34455e6fb28!2sPilar%20Printing%20%26%20Packaging!5e1!3m2!1sid!2sid!4v1751443371009!5m2!1sid!2sid"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        >
+        </iframe>
       </div>
     </section>
 
-    <!-- 🔷 Form Kontak -->
+    <!-- 🔷 Form Kontak & Info -->
     <section class="kontak-section" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <h3>Hubungi Kami</h3>
@@ -87,7 +86,6 @@
           <button type="submit">Kirim ke WhatsApp</button>
         </form>
 
-        <!-- 🔷 Informasi Tambahan -->
         <div class="info-wrapper">
           <div class="info-kontak">
             <h3>Informasi Kontak</h3>
@@ -109,15 +107,12 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- 🔷 Footer -->
     <footer class="footer" data-aos="fade-in">
       <div class="container">
-        <!-- Logo -->
         <div class="footer-logo-wrapper">
           <img src="image/logo.png" alt="Logo Pilar" class="footer-logo" />
         </div>
-
-        <!-- Media Sosial -->
         <div class="footer-social">
           <a
             href="https://instagram.com/yourusername"
@@ -126,61 +121,21 @@
             ><i class="fab fa-instagram"></i
           ></a>
           <a
-            href="https://facebook.com/yourusername"
-            target="_blank"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
             href="https://wa.me/6281234567890"
             target="_blank"
             aria-label="WhatsApp"
             ><i class="fab fa-whatsapp"></i
           ></a>
-          <a href="mailto:email@pilarprint.co.id" aria-label="Email"
-            ><i class="fas fa-envelope"></i
-          ></a>
         </div>
-
-        <!-- Copyright -->
         <p class="footer-copy">© 2025 by Taufiq. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- 🔷 Tombol Buka Modal WhatsApp -->
-    <!-- <button
-      class="wa-popup-btn"
-      onclick="openWAModal()"
-      aria-label="Kritik & Saran via WhatsApp"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </button> -->
-
-    <!-- 🔷 Modal WhatsApp -->
-    <!-- <div class="wa-modal" id="waModal">
-      <div class="wa-modal-content">
-        <span class="wa-close" onclick="closeWAModal()">&times;</span>
-        <h3>Kritik & Saran</h3>
-        <p>Silakan tulis pesan Anda, kami akan merespons melalui WhatsApp.</p>
-        <form onsubmit="return kirimKritikSaran();">
-          <input type="text" id="waNama" placeholder="Nama Anda" required />
-          <textarea
-            id="waPesan"
-            rows="4"
-            placeholder="Kritik & Saran Anda"
-            required
-          ></textarea>
-          <button type="submit">Kirim ke WhatsApp</button>
-        </form>
-      </div>
-    </div> -->
-
-    <!-- AOS JS -->
+    <!-- AOS & Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-
     <script src="js/script.js"></script>
   </body>
 </html>

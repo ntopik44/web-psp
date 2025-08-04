@@ -1,7 +1,9 @@
-/* 🔷 Hero Section Fullscreen */
+/* ===============================
+   Hero Section - Tentang Kami
+================================== */
 .hero-about-full {
   background: url("../image/herotentang.png") center center / cover no-repeat;
-  height: 100vh; /* Layar penuh */
+  height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -9,56 +11,105 @@
   justify-content: center;
   overflow: hidden;
 }
-/* 🔷 Tentang Perusahaan Section */
+
+/* ===============================
+   Hero Section Text & Animasi
+================================== */
+/* Hero Overlay untuk background gelap */
+.hero-about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(10, 116, 218, 0.5); /* transparan biru */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Center agar teks ada di tengah */
+.hero-center {
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Teks di Hero */
+.hero-about-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Fade In Animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   Tentang Perusahaan Section
+================================== */
 .tentang-perusahaan {
   padding: 4rem 2rem;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #333;
   text-align: center;
 }
+
 .tentang-perusahaan h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-}
-.tentang-perusahaan span {
   color: #0a74da;
+  font-weight: 700;
 }
+
+.tentang-perusahaan span {
+  color: #fff200;
+}
+
 .tentang-perusahaan p {
   max-width: 800px;
   margin: auto;
   font-size: 1.1rem;
   line-height: 1.8;
+  color: #555;
 }
 
-/* 🔷 Tata Letak Grid untuk Tentang Perusahaan */
+/* Grid Layout */
 .about-grid {
   display: flex;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .about-text {
   flex: 1;
   min-width: 280px;
-}
-
-.about-text h2 {
-  font-size: 2.3rem;
-  color: #0a74da;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.about-text span {
-  color: #fff200;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.8;
-  max-width: 600px;
+  text-align: left;
 }
 
 .about-image {
@@ -73,31 +124,113 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔷 Visi Misi Section */
+/* ===============================
+   Visi Misi Section
+================================== */
 .visi-misi {
   padding: 4rem 2rem;
   background-color: #eaf4fd;
 }
+
 .grid-visi-misi {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   max-width: 1000px;
   margin: auto;
+  justify-content: center;
 }
+
 .visi,
 .misi {
   flex: 1;
   min-width: 280px;
 }
+
 .visi h3,
 .misi h3 {
   color: #0a74da;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
 }
+
+.visi p,
 .misi ul {
-  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
 }
+
+.misi ul {
+  padding-left: 1.2rem;
+}
+
 .misi li {
   margin-bottom: 0.8rem;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================== */
+@media (max-width: 720px) {
+  .hero-about-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-about-text p {
+    font-size: 1rem;
+  }
+  .tentang-perusahaan h2 {
+    font-size: 2rem;
+  }
+
+  .tentang-perusahaan p {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .grid-visi-misi {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .visi,
+  .misi {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-about-text p {
+    font-size: 0.95rem;
+  }
+  .tentang-perusahaan h2 {
+    font-size: 1.6rem;
+  }
+
+  .tentang-perusahaan p {
+    font-size: 0.95rem;
+  }
+
+  .visi h3,
+  .misi h3 {
+    font-size: 1.3rem;
+  }
+
+  .visi p,
+  .misi li {
+    font-size: 0.95rem;
+  }
 }

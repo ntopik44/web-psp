@@ -11,23 +11,26 @@
       href="./image/logopilar.jpg"
       type="image/x-icon"
     />
-    <!-- Style Css -->
+
+    <!-- Style -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
-    <!-- Font Awesome CDN -->
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- AOS -->
+
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navbar -->
-    <header class="navbar">
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar" data-aos="fade-down" data-aos-duration="800">
       <div class="container">
         <a href="index.html" class="logo">
-          <img src="image/logo.png" alt="Logo Pilar" />
+          <img src="image/logo.png" alt="Pilar Screen Printing Logo" />
         </a>
         <nav>
           <ul class="nav-links" id="nav-links">
@@ -41,18 +44,26 @@
       </div>
     </header>
 
-    <!-- 🔷 Hero Section - Tentang Kami -->
+    <!-- ========== HERO SECTION ========== -->
     <section
       class="hero-about-full"
       data-aos="fade-in"
       data-aos-duration="1200"
     >
       <div class="hero-about-overlay">
-        <div class="hero-center"></div>
+        <div class="hero-center">
+          <div class="hero-about-text" data-aos="zoom-in" data-aos-delay="400">
+            <h1>Tentang Kami</h1>
+            <p>
+              Kami hadir untuk mendukung UMKM dan brand lokal melalui kemasan
+              berkualitas.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 🔷 Section: Tentang Perusahaan  -->
+    <!-- ========== TENTANG PERUSAHAAN ========== -->
     <section class="tentang-perusahaan" data-aos="fade-up">
       <div class="container about-grid">
         <div class="about-text">
@@ -70,7 +81,7 @@
       </div>
     </section>
 
-    <!-- 🔷 Section: Visi & Misi -->
+    <!-- ========== VISI & MISI ========== -->
     <section class="visi-misi" data-aos="fade-up" data-aos-delay="100">
       <div class="container grid-visi-misi">
         <div class="visi">
@@ -91,15 +102,12 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- ========== FOOTER ========== -->
     <footer class="footer" data-aos="fade-in">
       <div class="container">
-        <!-- Logo -->
         <div class="footer-logo-wrapper">
           <img src="image/logo.png" alt="Logo Pilar" class="footer-logo" />
         </div>
-
-        <!-- Media Sosial -->
         <div class="footer-social">
           <a
             href="https://instagram.com/yourusername"
@@ -108,59 +116,21 @@
             ><i class="fab fa-instagram"></i
           ></a>
           <a
-            href="https://facebook.com/yourusername"
-            target="_blank"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6282232674959"
             target="_blank"
             aria-label="WhatsApp"
             ><i class="fab fa-whatsapp"></i
           ></a>
-          <a href="mailto:email@pilarprint.co.id" aria-label="Email"
-            ><i class="fas fa-envelope"></i
-          ></a>
         </div>
-
-        <!-- Copyright -->
         <p class="footer-copy">© 2025 by Taufiq. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- 🔷 Tombol Buka Modal WhatsApp -->
-    <!-- <button
-      class="wa-popup-btn"
-      onclick="openWAModal()"
-      aria-label="Kritik & Saran via WhatsApp"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </button> -->
-
-    <!-- 🔷 Modal WhatsApp -->
-    <!-- <div class="wa-modal" id="waModal">
-      <div class="wa-modal-content">
-        <span class="wa-close" onclick="closeWAModal()">&times;</span>
-        <h3>Kritik & Saran</h3>
-        <p>Silakan tulis pesan Anda, kami akan merespons melalui WhatsApp.</p>
-        <form onsubmit="return kirimKritikSaran();">
-          <input type="text" id="waNama" placeholder="Nama Anda" required />
-          <textarea
-            id="waPesan"
-            rows="4"
-            placeholder="Kritik & Saran Anda"
-            required
-          ></textarea>
-          <button type="submit">Kirim ke WhatsApp</button>
-        </form>
-      </div>
-    </div> -->
-
-    <script src="js/script.js"></script>
+    <!-- Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

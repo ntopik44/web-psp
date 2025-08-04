@@ -1,4 +1,6 @@
-/* Reset dan Umum */
+/* ============================
+   RESET & UMUM
+============================= */
 * {
   margin: 0;
   padding: 0;
@@ -15,22 +17,28 @@ a {
   color: inherit;
 }
 
-/* ========================
-   NAVBAR (Awal Transparan)
-=========================== */
+/* ============================
+   NAVBAR
+============================= */
 .navbar {
-  position: fixed; /* Selalu di atas */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #79b7f0bc; /* Awalnya transparan */
-  padding: 1rem 0; /* Besar di awal */
+  background-color: #79b7f0bc;
+  padding: 1rem 0;
   transition: all 0.3s ease-in-out;
   color: white;
 }
-
-/* Container isi navbar */
+.navbar.scrolled {
+  background-color: #0a74da;
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar.scrolled .logo img {
+  height: 32px;
+}
 .container {
   width: 90%;
   max-width: 1200px;
@@ -39,27 +47,20 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
-/* Logo teks atau gambar */
 .logo img {
   height: 40px;
   transition: all 0.3s ease;
 }
-
-/* Nav link */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
-
 .nav-links li a {
   color: white;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
-
-/* Hamburger menu */
 .hamburger {
   display: none;
   font-size: 1.5rem;
@@ -67,53 +68,114 @@ a {
   color: white;
 }
 
-/* Saat discroll, ubah warna dan padding */
-.navbar.scrolled {
-  background-color: #0a74da; /* Biru solid */
-  padding: 0.8rem 0; /* Mengecil */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* ============================
+   HERO SECTION
+============================= */
+.hero {
+  position: relative;
+  height: 85vh;
+  background-image: url("../image/heroberanda.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
-
-/* Logo mengecil saat scroll */
-.navbar.scrolled .logo img {
-  height: 32px;
-}
-
-.hero-image img {
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
+  height: 100%;
+  background-color: rgba(10, 116, 218, 0.4);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 65vh;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ============================
+   PROMO SECTION
+============================= */
+.promo-section {
+  padding: 4rem 1rem;
+  background-color: #f4f8fc;
+}
+.promo-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
   margin-bottom: 2rem;
+  color: #0a74da;
+}
+.promo-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.promo-box {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  text-align: center;
+}
+.promo-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-.tentang-img {
-  width: 100%;
-  max-width: 800px;
-  margin: 1rem auto 2rem;
-  display: block;
-  border-radius: 12px;
+.promo-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0a74da;
 }
-/* ========================
-   FOOTER (Minimalis Tengah)
-=========================== */
+.promo-box h3 {
+  color: #0a74da;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================
+   FOOTER
+============================= */
 .footer {
   background-color: #0a74da;
   color: white;
   text-align: center;
   padding: 2.5rem 1rem;
   margin-top: 4rem;
-  position: relative;
-  overflow: hidden;
 }
-
 .footer .container {
   max-width: 800px;
   margin: 0 auto;
 }
-
-/* Logo tengah */
 .footer-logo-wrapper {
   display: flex;
   justify-content: center;
@@ -121,110 +183,27 @@ a {
 }
 .footer-logo {
   height: 50px;
-  width: 150px;
-  max-width: 100px;
-  min-width: 80px;
-
   animation: float 3s ease-in-out infinite;
 }
-
-/* Sosial media */
 .footer-social {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 1rem;
 }
-
 .footer-social a {
   color: white;
   font-size: 1.4rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .footer-social a:hover {
   color: #fff200;
   transform: scale(1.2);
 }
-
-/* Teks hak cipta */
 .footer-copy {
   font-size: 0.85rem;
   opacity: 0.85;
 }
-
-/* 🔷 Tombol Buka Modal (Floating Button) */
-.wa-popup-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 14px 16px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-.wa-popup-btn:hover {
-  background-color: #1ebc59;
-}
-
-/* 🔷 Modal WhatsApp */
-.wa-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.wa-modal-content {
-  background-color: white;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-.wa-close {
-  float: right;
-  font-size: 1.5rem;
-  color: #888;
-  cursor: pointer;
-}
-.wa-close:hover {
-  color: #000;
-}
-.wa-modal-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.wa-modal-content input,
-.wa-modal-content textarea {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-.wa-modal-content button {
-  background-color: #25d366;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.wa-modal-content button:hover {
-  background-color: #1ebc59;
-}
-
-/* Animasi logo mengambang */
 @keyframes float {
   0%,
   100% {
@@ -236,11 +215,14 @@ a {
 }
 
 /* ========================
-     RESPONSIF NAVBAR
-  =========================== */
-@media (max-width: 768px) {
+   RESPONSIVE: Max Width 720px
+=========================== */
+@media (max-width: 720px) {
   .hamburger {
     display: block;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: white;
   }
 
   .nav-links {
@@ -252,47 +234,88 @@ a {
     right: 20px;
     padding: 1rem;
     border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    z-index: 999;
   }
 
   .nav-links.show {
     display: flex;
   }
-}
-@media (max-width: 360px) {
-  .footer {
+
+  /* Promo Section */
+  .promo-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Menjadi satu kolom */
+    gap: 1.5rem;
+  }
+
+  .promo-box {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem;
     text-align: center;
-    padding: 2rem 1rem;
   }
 
-  .footer-logo-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
+  .promo-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 
-  .footer-logo {
-    width: clamp(80px, 20vw, 120px);
-    height: auto;
+  .promo-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Footer */
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-social {
-    display: flex;
     justify-content: center;
-    gap: 0.75rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    gap: 1rem;
   }
 
-  .footer-social a i {
-    font-size: 1.3rem;
+  .footer-logo {
+    margin-bottom: 1rem;
+    height: 45px;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+}
+
+/* ========================
+   RESPONSIF: Max Width 320px
+=========================== */
+@media (max-width: 320px) {
+  /* Promo Section */
+  .promo-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .promo-box p {
+    font-size: 0.85rem;
+  }
+
+  .promo-grid {
+    gap: 1.2rem;
+  }
+
+  /* Footer */
+  .footer-logo {
+    height: 40px;
+  }
+
+  .footer-social a {
+    font-size: 1.2rem;
   }
 
   .footer-copy {
     font-size: 0.75rem;
-    line-height: 1.4;
   }
 }
