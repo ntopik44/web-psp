@@ -159,7 +159,7 @@ a {
   background-image: linear-gradient(
     to top,
     black,
-    rgb(0, 0, 0, 0.596),
+    rgb(0, 0, 0, 0.55),
     transparent
   );
   opacity: 1; /* Contoh: Tambahkan opasitas agar gambar terlihat */
