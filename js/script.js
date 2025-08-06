@@ -97,15 +97,27 @@ function closeWAModal() {
   document.getElementById("waModal").style.display = "none";
 }
 
-function kirimKritikSaran() {
-  const nama = document.getElementById("waNama").value.trim();
-  const pesan = document.getElementById("waPesan").value.trim();
+function kirimWhatsApp() {
+  const nama = document.getElementById("nama").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const pesan = document.getElementById("pesan").value.trim();
 
-  const teks = `Halo Pilar Screen Printing,%0A%0ASaya ingin menyampaikan kritik dan saran:%0A%0ANama: ${nama}%0APesan: ${pesan}`;
-  const nomor = "6282232674959";
+  const teks = `Halo Pilar Screen Printing,%0A
+    %0ASaya ingin menyampaikan kritik dan saran:%0A
+    %0ANama: ${nama}%0A
+  Email: ${email}%0A
+  Pesan: ${pesan}`;
+
+  const nomor = "6285801472279"; // Nomor WhatsApp tujuan
   const url = `https://wa.me/${nomor}?text=${teks}`;
 
   window.open(url, "_blank");
-  closeWAModal();
-  return false;
+  return false; // Mencegah form reload
+}
+
+function openWAModal() {
+  document.getElementById("waModal").style.display = "block";
+}
+function closeWAModal() {
+  document.getElementById("waModal").style.display = "none";
 }
