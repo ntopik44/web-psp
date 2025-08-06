@@ -108,7 +108,7 @@ function kirimWhatsApp() {
   Email: ${email}%0A
   Pesan: ${pesan}`;
 
-  const nomor = "6285801472279"; // Nomor WhatsApp tujuan
+  const nomor = "6281381196712"; // Nomor WhatsApp tujuan
   const url = `https://wa.me/${nomor}?text=${teks}`;
 
   window.open(url, "_blank");
